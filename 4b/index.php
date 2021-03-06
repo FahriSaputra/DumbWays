@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql)
         <?php 
         $i = 0;
         while($rows = mysqli_fetch_assoc($result)){
-          // $i++;
+          $i++;
         ?>
         <div class="card"style="width : 20rem">
           <div class="col-md-3" >
@@ -38,7 +38,7 @@ $result = mysqli_query($conn, $sql)
                 <h5 class="card-title"><?=$rows['name']?></h5>
                 <p class="card-text"><?=$rows['type']?></p>
                 <a href="#" class="btn btn-primary block">Detail</a>
-                <a href="#" class="btn btn-danger">DELETE</a>
+                <a href="delete.php?id=<?=$rows['id']?>" class="btn btn-danger">DELETE</a>
                 <a href="#" class="btn btn-warning">EDIT</a>
               </div>
             </div>
